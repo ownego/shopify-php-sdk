@@ -29,6 +29,11 @@ class GraphQLService extends AbstractService
 
         $error = data_get($response, 'errors');
         $code = data_get($error, '0.extensions.code');
+
+        if ($code === 'THROTTLED' && $tries++ < $max_tries) {
+            sleep(1);
+        }
+
     } while ($code === 'THROTTLED' && $tries++ < $max_tries);
 
     return (object) [

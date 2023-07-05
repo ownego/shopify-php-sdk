@@ -44,18 +44,4 @@ class Order extends AbstractObject
     {
         return OrderFields::getInstance();
     }
-
-    /**
-     * Get USD Rate
-     *
-     * @return float|int
-     */
-    public function getUsdRate()
-    {
-        if (!(float) $this->total_price) {
-            return 0;
-        }
-
-        return round($this->total_price_usd / $this->total_price, 6);
-    }
 }

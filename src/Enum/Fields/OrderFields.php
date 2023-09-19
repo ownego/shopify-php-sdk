@@ -57,6 +57,7 @@ class OrderFields extends AbstractObjectEnum
     const UPDATED_AT = 'updated_at';
     const USER_ID = 'user_id';
     const ORDER_STATUS_URL = 'order_status_url';
+    const TEST = 'test';
 
     public function getFieldTypes()
     {
@@ -113,7 +114,8 @@ class OrderFields extends AbstractObjectEnum
             'total_weight' => 'string',
             'updated_at' => 'DateTime',
             'user_id' => 'integer',
-            'order_status_url' => 'string'
+            'order_status_url' => 'string',
+            'test' => 'boolean'
         );
     }
 }

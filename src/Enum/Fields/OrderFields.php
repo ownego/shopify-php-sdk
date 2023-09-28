@@ -18,6 +18,7 @@ class OrderFields extends AbstractObjectEnum
     const CUSTOMER = 'customer';
     const CUSTOMER_LOCALE = 'customer_locale';
     const DISCOUNT_CODES = 'discount_codes';
+    const DISCOUNT_APPLICATIONS = 'discount_applications';
     const EMAIL = 'email';
     const CONTACT_EMAIL = 'contact_email';
     const FINANCIAL_STATUS = 'financial_status';
@@ -77,6 +78,7 @@ class OrderFields extends AbstractObjectEnum
             'customer' => 'Customer',
             'customer_locale' => 'string',
             'discount_codes' => 'DiscountCode[]',
+            'discount_applications' => 'array',
             'email' => 'string',
             'financial_status' => 'string',
             'fulfillments' => 'Fulfillment[]',

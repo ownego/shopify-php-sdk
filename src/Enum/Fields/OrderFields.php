@@ -18,6 +18,7 @@ class OrderFields extends AbstractObjectEnum
     const CUSTOMER = 'customer';
     const CUSTOMER_LOCALE = 'customer_locale';
     const DISCOUNT_CODES = 'discount_codes';
+    const DISCOUNT_APPLICATIONS = 'discount_applications';
     const EMAIL = 'email';
     const CONTACT_EMAIL = 'contact_email';
     const FINANCIAL_STATUS = 'financial_status';
@@ -57,6 +58,7 @@ class OrderFields extends AbstractObjectEnum
     const UPDATED_AT = 'updated_at';
     const USER_ID = 'user_id';
     const ORDER_STATUS_URL = 'order_status_url';
+    const TEST = 'test';
 
     public function getFieldTypes()
     {
@@ -76,6 +78,7 @@ class OrderFields extends AbstractObjectEnum
             'customer' => 'Customer',
             'customer_locale' => 'string',
             'discount_codes' => 'DiscountCode[]',
+            'discount_applications' => 'array',
             'email' => 'string',
             'financial_status' => 'string',
             'fulfillments' => 'Fulfillment[]',
@@ -113,7 +116,8 @@ class OrderFields extends AbstractObjectEnum
             'total_weight' => 'string',
             'updated_at' => 'DateTime',
             'user_id' => 'integer',
-            'order_status_url' => 'string'
+            'order_status_url' => 'string',
+            'test' => 'boolean'
         );
     }
 }

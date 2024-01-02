@@ -25,6 +25,7 @@ class CustomerFields extends AbstractObjectEnum
     const TOTAL_SPENT = 'total_spent';
     const UPDATED_AT = 'updated_at';
     const VERIFIED_EMAIL = 'verified_email';
+    const EMAIL_MARKETING_CONSENT = 'email_marketing_consent';
 
     public function getFieldTypes()
     {
@@ -49,7 +50,8 @@ class CustomerFields extends AbstractObjectEnum
             'tax_exempt' => 'boolean',
             'total_spent' => 'string',
             'updated_at' => 'DateTime',
-            'verified_email' => 'boolean'
+            'verified_email' => 'boolean',
+            'email_marketing_consent' => 'array',
         );
     }
 }

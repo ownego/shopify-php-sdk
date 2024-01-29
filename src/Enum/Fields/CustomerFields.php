@@ -4,7 +4,6 @@ namespace Shopify\Enum\Fields;
 
 class CustomerFields extends AbstractObjectEnum
 {
-    const ACCEPTS_MARKETING = 'accepts_marketing';
     const ADDRESSES = 'addresses';
     const CREATED_AT = 'created_at';
     const DEFAULT_ADDRESS = 'default_address';
@@ -25,11 +24,11 @@ class CustomerFields extends AbstractObjectEnum
     const TOTAL_SPENT = 'total_spent';
     const UPDATED_AT = 'updated_at';
     const VERIFIED_EMAIL = 'verified_email';
+    const EMAIL_MARKETING_CONSENT = 'email_marketing_consent';
 
     public function getFieldTypes()
     {
         return array(
-            'accepts_marketing' => "boolean",
             'addresses' => 'Address[]',
             'created_at' => 'DateTime',
             'default_address' => 'Address',
@@ -49,7 +48,8 @@ class CustomerFields extends AbstractObjectEnum
             'tax_exempt' => 'boolean',
             'total_spent' => 'string',
             'updated_at' => 'DateTime',
-            'verified_email' => 'boolean'
+            'verified_email' => 'boolean',
+            'email_marketing_consent' => 'array',
         );
     }
 }
